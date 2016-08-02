@@ -83,25 +83,25 @@
 
 
 <meta name="description" content="(此乃我在coursera上面，学习Andrew Ng(吴恩达)的课程Machine Learning的笔记)
-机器学习问题分为：监督学习（supervised learning）和无监督学习（unsupervised learning）。
-监督学习在监督学习中，对于数据集中的每个数据，都有相应的正确答案，算法就是基于这些来做出预测。回归问题：连续值输出，如预测某天的温度分类问题：离散值输出，如预">
+本节主要是复习线性代数。
+矩阵Matrix矩阵为由数字组成的矩形阵列，并写在一个中括号里，比如，一个3行*4列的矩阵如下：$$A=\left[\begin{matrix}1 &amp;amp; 2 &amp;amp; 3 &amp;amp; 1\\4 &amp;amp; 5 &amp;amp; 6 &amp;amp; 1\\7 &amp;am">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Machine Learning(1): Introduction">
-<meta property="og:url" content="janhocn.github.io/2016/07/31/Machine-Learning-1-Introduction/index.html">
+<meta property="og:title" content="Machine Learning(2): Introduction(Linear Algebra Review)">
+<meta property="og:url" content="janhocn.github.io/2016/08/01/Machine-Learning-2-Linear Algebra/index.html">
 <meta property="og:site_name" content="I'M QY">
 <meta property="og:description" content="(此乃我在coursera上面，学习Andrew Ng(吴恩达)的课程Machine Learning的笔记)
-机器学习问题分为：监督学习（supervised learning）和无监督学习（unsupervised learning）。
-监督学习在监督学习中，对于数据集中的每个数据，都有相应的正确答案，算法就是基于这些来做出预测。回归问题：连续值输出，如预测某天的温度分类问题：离散值输出，如预">
-<meta property="og:image" content="http://i1.piimg.com/4851/a0068d9697f008a3.jpg">
-<meta property="og:image" content="http://i1.piimg.com/4851/69031400ffa6276a.jpg">
-<meta property="og:image" content="http://i1.piimg.com/4851/30c6231e8bc2293e.jpg">
-<meta property="og:updated_time" content="2016-08-02T16:14:47.000Z">
+本节主要是复习线性代数。
+矩阵Matrix矩阵为由数字组成的矩形阵列，并写在一个中括号里，比如，一个3行*4列的矩阵如下：$$A=\left[\begin{matrix}1 &amp;amp; 2 &amp;amp; 3 &amp;amp; 1\\4 &amp;amp; 5 &amp;amp; 6 &amp;amp; 1\\7 &amp;am">
+<meta property="og:image" content="http://i4.piimg.com/4851/cb358434a00d2780.jpg">
+<meta property="og:image" content="http://i4.piimg.com/4851/66d23c375f71b1c1.jpg">
+<meta property="og:image" content="http://i4.piimg.com/4851/59904bd11f60a1eb.jpg">
+<meta property="og:updated_time" content="2016-08-02T16:12:37.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Machine Learning(1): Introduction">
+<meta name="twitter:title" content="Machine Learning(2): Introduction(Linear Algebra Review)">
 <meta name="twitter:description" content="(此乃我在coursera上面，学习Andrew Ng(吴恩达)的课程Machine Learning的笔记)
-机器学习问题分为：监督学习（supervised learning）和无监督学习（unsupervised learning）。
-监督学习在监督学习中，对于数据集中的每个数据，都有相应的正确答案，算法就是基于这些来做出预测。回归问题：连续值输出，如预测某天的温度分类问题：离散值输出，如预">
-<meta name="twitter:image" content="http://i1.piimg.com/4851/a0068d9697f008a3.jpg">
+本节主要是复习线性代数。
+矩阵Matrix矩阵为由数字组成的矩形阵列，并写在一个中括号里，比如，一个3行*4列的矩阵如下：$$A=\left[\begin{matrix}1 &amp;amp; 2 &amp;amp; 3 &amp;amp; 1\\4 &amp;amp; 5 &amp;amp; 6 &amp;amp; 1\\7 &amp;am">
+<meta name="twitter:image" content="http://i4.piimg.com/4851/cb358434a00d2780.jpg">
 
 
 
@@ -119,7 +119,7 @@
   };
 </script>
 
-  <title> Machine Learning(1): Introduction | I'M QY </title>
+  <title> Machine Learning(2): Introduction(Linear Algebra Review) | I'M QY </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -260,7 +260,7 @@
             
             
               
-                Machine Learning(1): Introduction
+                Machine Learning(2): Introduction(Linear Algebra Review)
               
             
           </h1>
@@ -272,8 +272,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-07-31T19:57:05+08:00" content="2016-07-31">
-              2016-07-31
+            <time itemprop="dateCreated" datetime="2016-08-01T21:54:05+08:00" content="2016-08-01">
+              2016-08-01
             </time>
           </span>
 
@@ -320,13 +320,16 @@
 
       
         <p><em>(此乃我在coursera上面，学习Andrew Ng(吴恩达)的课程Machine Learning的笔记)</em></p>
-<p>机器学习问题分为：<strong>监督学习（supervised learning）</strong>和<strong>无监督学习（unsupervised learning）</strong>。</p>
-<h3 id="监督学习"><a href="#监督学习" class="headerlink" title="监督学习"></a>监督学习</h3><p>在监督学习中，对于数据集中的每个数据，都有相应的<em>正确答案</em>，算法就是基于这些来做出预测。<br><strong>回归问题：</strong>连续值输出，如预测某天的温度<br><strong>分类问题：</strong>离散值输出，如预测是否是肿瘤</p>
-<h3 id="无监督学习"><a href="#无监督学习" class="headerlink" title="无监督学习"></a>无监督学习</h3><p>无监督学习的训练数据没有给出“正确答案”（标签），它只有一个数据集，需要算法自动找出这个数据集的某种结构或者分类，如果通过聚类算法，找出不同类型的人，不同的市场等等，这些事先都没有给出正确的答案。</p>
-<h3 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h3><p>Octave和matlab，Andrew推荐使用Octave，因为他们都是用这个来演示的-_–。</p>
-<h3 id="线性回归linear-Regression"><a href="#线性回归linear-Regression" class="headerlink" title="线性回归linear Regression"></a>线性回归linear Regression</h3><p>训练输出的模型函数叫<strong>hypothesis(假设)</strong>，用$h$来表示。<br>而<br>$$h_\theta(x)=\theta_0+\theta_1x$$<br>称为单变量线性模型。<br><strong>线性回归</strong>则是指通过数据训练出一个线性模型的过程。</p>
-<h3 id="代价（损失）函数Cost-Function"><a href="#代价（损失）函数Cost-Function" class="headerlink" title="代价（损失）函数Cost Function"></a>代价（损失）函数Cost Function</h3><p>$$J(\theta_0,\theta_1)＝\frac{1}{2m}\sum_{i=1}^{m}(h_\theta(x_i)-y_i)^2$$<br>代价函数用于评估模型的精度。其中，$x_i$为预测输入，$y_i$为实际输出，即实际值，而$h_\theta(x_i)-y_i$项表示预测值和实际值的误差。平方是为了防止误差累加后会正负抵消，另外也可以用绝对值或者对数似然损失函数（见《统计学习方法》李航1.3节）。<br>另外需要解析的是$2m$的意义，除以$m$显然是为了求平均值，而“2”的加入其实是为了方便以后的计算。Andrew在此没有细说，但是后面学习剃度下降的时候就应该知道，需要求导，平方的导数会多出一个2，我猜这里就是为了约去它。<br>还有需要注意的是，$h$的自变量是$x$，而$J$的自变量是$\theta$。</p>
-<h3 id="剃度下降Gradient-Descent"><a href="#剃度下降Gradient-Descent" class="headerlink" title="剃度下降Gradient Descent"></a>剃度下降Gradient Descent</h3><p>剃度下降算法就是给出初始值$\theta_i$，然后通过一点点改变$\theta_i$，使得$J(\theta)$变小，直到它到达最小值或局部最小值。<br>其过程就是不断重复以下步骤，直到收敛：<br>$$\theta_j:=\theta_j-\alpha\frac{\partial}{\partial\theta_j}J(\theta_0,\theta_1)$$<br>其中符号“:=”表示赋值，$j$表示特征的索引，这里$j=0，1$。需要注意的是，这里的迭代必须是两个特征同时迭代，即：<img src="http://i1.piimg.com/4851/a0068d9697f008a3.jpg" alt="ML_3"><br>由于$\frac{\partial}{\partial\theta_j}J$就是$J$的斜率，在越接近最低点时越小，即越陡峭下降越快，越平缓下降越慢。所以，不用改变$\alpha$也可以收敛。如图所示：<img src="http://i1.piimg.com/4851/69031400ffa6276a.jpg" alt="ML_1"><br>另外，对于称为学习速率的$\alpha$，取值太小，则收敛太慢；取值太大，则可能造成无法收敛。<img src="http://i1.piimg.com/4851/30c6231e8bc2293e.jpg" alt="ML_2"></p>
+<p>本节主要是复习线性代数。</p>
+<h3 id="矩阵Matrix"><a href="#矩阵Matrix" class="headerlink" title="矩阵Matrix"></a>矩阵Matrix</h3><p>矩阵为由数字组成的矩形阵列，并写在一个中括号里，比如，一个3行*4列的矩阵如下：<br>$$<br>A=\left[<br>\begin{matrix}<br>1 &amp; 2 &amp; 3 &amp; 1\\<br>4 &amp; 5 &amp; 6 &amp; 1\\<br>7 &amp; 8 &amp; 9 &amp; 1<br>\end{matrix}<br>\right]<br>$$<br>该矩阵也被称为$3\times4$维矩阵。</p>
+<h3 id="向量vector"><a href="#向量vector" class="headerlink" title="向量vector"></a>向量vector</h3><p>一个只有一列的特殊矩阵被称为向量，例如一个3维的向量如下：<br>$$<br>y=\left[<br>\begin{matrix}<br>1 \\<br>4 \\<br>7<br>\end{matrix}<br>\right]<br>$$<br>向量的元素个数就是向量的维dimensional。</p>
+<p>另外，我们一般一个大写字母表示矩阵，用小写字母表示向量，或者标量。</p>
+<h3 id="矩阵相乘的性质"><a href="#矩阵相乘的性质" class="headerlink" title="矩阵相乘的性质"></a>矩阵相乘的性质</h3><p>矩阵相乘不符合交换律，但是符合结合律，如：<br>$AB\neq BA$ $A(BC) = (AB)C$</p>
+<h3 id="单位矩阵Identity"><a href="#单位矩阵Identity" class="headerlink" title="单位矩阵Identity"></a>单位矩阵Identity</h3><p>用$I$或$I_{n\times n}$表示单位矩阵，它的特点就是矩阵对角线上值为1，其它为零：<br>$$<br>A=\left[<br>\begin{matrix}<br>1 &amp; 0 &amp; 0 &amp; 0\\<br>0 &amp; 1 &amp; 0 &amp; 0\\<br>0 &amp; 0 &amp; 1 &amp; 0\\<br>0 &amp; 0 &amp; 0 &amp; 1\<br>\end{matrix}<br>\right]<br>$$<br>对于任何矩阵A都成立：<br>$$IA=AI=A$$<br>这里需要注意的地方是，如果A为$m\times n$维的，那么这里的$I$的维度就不一样了：<br>$$I_{m\times m}A_{m\times n}=A_{m\times n}I_{n\times n}=A_{m\times n}$$<br><strong>$I$有点类似数字1.</strong></p>
+<h3 id="逆矩阵Inverse"><a href="#逆矩阵Inverse" class="headerlink" title="逆矩阵Inverse"></a>逆矩阵Inverse</h3><p>一个数字和它的倒数（如果有倒数的话）相乘，将会等于1，如：<br>$$3\times \frac{1}{3}=1$$<br>对于矩阵来说，类似倒数的说法被称为逆矩阵(用上标-1表示)，它使得以下公式成立：<br>$$AA^{-1}=A^{-1}A=I$$<br>只有方阵（行列维度相等）才有逆矩阵。<br>另外，类似零没有倒数的情况，逆矩阵不存在的矩阵被称为奇异矩阵或退化矩阵，比如零矩阵就是一个奇异矩阵。<br>Octave的pinv(A)语句就是求A的逆矩阵。</p>
+<h3 id="矩阵的倒置Matrix-Transpose"><a href="#矩阵的倒置Matrix-Transpose" class="headerlink" title="矩阵的倒置Matrix Transpose"></a>矩阵的倒置Matrix Transpose</h3><p>倒置的意思就是把矩阵行和列交换，用上标$T$表示。如：<br>$A=<br>\left[<br>\begin{matrix}<br>1 &amp; 2 &amp; 3 \\<br>4 &amp; 5 &amp; 6<br>\end{matrix}<br>\right]<br>$的倒置为：$A^T=<br>\left[<br>\begin{matrix}<br>1 &amp; 4 \\<br>2 &amp; 5 \\<br>3 &amp; 6<br>\end{matrix}<br>\right]<br>$</p>
+<h3 id="利用矩阵相乘的性质进行回归问题的计算"><a href="#利用矩阵相乘的性质进行回归问题的计算" class="headerlink" title="利用矩阵相乘的性质进行回归问题的计算"></a>利用矩阵相乘的性质进行回归问题的计算</h3><p><img src="http://i4.piimg.com/4851/cb358434a00d2780.jpg" alt="ML_4"><br>如上图，就是介绍了一个预测房价的过程，房子的面积作为输入A（DataMatrix），模型$h_\theta(x)$的参数parameter作为x，预测值prediction作为y，这样就可以通过矩阵和向量的相乘来实现了预测房价的计算，简化了计算过程和提高了计算效率。<br><img src="http://i4.piimg.com/4851/66d23c375f71b1c1.jpg" alt="ML_5"></p>
+<p>上面是利用矩阵和向量相乘，同样可以利用矩阵和矩阵相乘，来简化我们的计算,这样就可以一次验证多个模型的精度：<br><img src="http://i4.piimg.com/4851/59904bd11f60a1eb.jpg" alt="ML_6"></p>
 
       
     </div>
@@ -351,13 +354,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/07/31/Machine-Learning-1-Introduction/" rel="next" title="Machine Learning(1): Introduction">
+                <i class="fa fa-chevron-left"></i> Machine Learning(1): Introduction
+              </a>
+            
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/08/01/Machine-Learning-2-Linear Algebra/" rel="prev" title="Machine Learning(2): Introduction(Linear Algebra Review)">
-                Machine Learning(2): Introduction(Linear Algebra Review) <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -493,7 +496,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#监督学习"><span class="nav-number">1.</span> <span class="nav-text">监督学习</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#无监督学习"><span class="nav-number">2.</span> <span class="nav-text">无监督学习</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#工具"><span class="nav-number">3.</span> <span class="nav-text">工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#线性回归linear-Regression"><span class="nav-number">4.</span> <span class="nav-text">线性回归linear Regression</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代价（损失）函数Cost-Function"><span class="nav-number">5.</span> <span class="nav-text">代价（损失）函数Cost Function</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#剃度下降Gradient-Descent"><span class="nav-number">6.</span> <span class="nav-text">剃度下降Gradient Descent</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#矩阵Matrix"><span class="nav-number">1.</span> <span class="nav-text">矩阵Matrix</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#向量vector"><span class="nav-number">2.</span> <span class="nav-text">向量vector</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#矩阵相乘的性质"><span class="nav-number">3.</span> <span class="nav-text">矩阵相乘的性质</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#单位矩阵Identity"><span class="nav-number">4.</span> <span class="nav-text">单位矩阵Identity</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#逆矩阵Inverse"><span class="nav-number">5.</span> <span class="nav-text">逆矩阵Inverse</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#矩阵的倒置Matrix-Transpose"><span class="nav-number">6.</span> <span class="nav-text">矩阵的倒置Matrix Transpose</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#利用矩阵相乘的性质进行回归问题的计算"><span class="nav-number">7.</span> <span class="nav-text">利用矩阵相乘的性质进行回归问题的计算</span></a></li></ol></div>
             
           </div>
         </section>
